@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值</title>
+</head>
+<body>
+<form action="/pay" method="post">
+    <p>金额<input type="s" name="prices" onkeyup="this.value=/^[0-9]*\.?[0-9]{0,2}$/.test(this.value) ? this.value : this.value.substring(0,this.value.length-1)"></p>
+    <p><button type="submit">充值</button></p>
+</form>
+</body>
+</html>

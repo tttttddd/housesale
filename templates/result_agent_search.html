@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>符合条件的中介</title>
+    <h1>Second Hand House</h1>
+</head>
+<body style="font-size:20px; font-weight:bold; margin-top:60px; background-color:#97CBFF; text-align:center;">
+    {% for agent in dict.agents %}
+    <li style="list-style:none;border-bottom:1px solid #eee;padding-top:10px;">
+        <div class="user-info" style="font-size:16px;color:#9b9b9b;line-height:40px;">
+            <img src="{{ url_for('static',filename='images/img2.jpg') }}" alt="" class="avatar"
+            style="width:40px;height:40px;border-radius:50%;">
+            <span class="username" style="margin-left:10px;">{{agent.agent_name}}</span>
+        </div>
+    </li>
+    {% endfor %}
+    <a href="/user_index">返回</a>
+</body>
+</html>

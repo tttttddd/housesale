@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>创建交易</title>
+    <h1>Second Hand House</h1>
+</head>
+<body style="font-size:20px; font-weight:bold; margin-top:60px; background-color:#97CBFF; text-align:center;">
+<form action="/deal" method="post">
+    <p>买房者<input type="text" required="required" name="buy_user" style="height:1.6em;"></p>
+    <p>房屋名<input type="text" required="required" name="house_name" style="height:1.6em;"></p>
+    <p>  金额<input type="text" placeholder="元" name="prices" required="required" style="height:1.6em;" onkeyup="this.value=/^[0-9]*\.?[0-9]{0,2}$/.test(this.value) ? this.value : this.value.substring(0,this.value.length-1)"></p>
+    <p><button type="submit" style="width:8em; height:2em; background-color:#FFC1E0; font-weight:bold;">创建交易</button></p>
+</form>
+</body>
+</html>

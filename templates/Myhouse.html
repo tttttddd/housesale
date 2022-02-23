@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My House</title>
+    <h1>Second Hand House</h1>
+</head>
+<body style="font-size:20px; font-weight:bold; margin-top:60px; background-color:#97CBFF; text-align:center;">
+    {% for house in dict.houses %}
+    <li style="list-style:none;border-bottom:1px solid #eee;padding-top:10px;">
+        <div class="user-info" style="font-size:16px;color:#9b9b9b;line-height:40px;">
+            <img src="{{ url_for('static',filename='images/img2.jpg') }}" alt="" class="avatar"
+            style="width:40px;height:40px;border-radius:50%;">
+            <span class="username" style="margin-left:10px;">{{ house.house_name }}    {{ house.acreage }}平方米</span>
+            <span class="create-time" style="float:right;">{{ house.prices }}</span>
+        </div>
+        <p class="answer-content" style="margin-left:50px;">{{ house.province }}-{{ house.city }}-{{ house.area }}-{{ house.address }}</p>
+    </li>
+    {% endfor %}
+    <a href="/house_owner_index">返回</a>
+</body>
+</html>
